@@ -4,6 +4,14 @@
     background-color: black;
     color: rgb(73, 240, 64);
 }
+.lightmode{
+    background-color: antiquewhite;
+    color: rgb(73, 240, 64);
+}
+.darkmode{
+        background-color: rgb(0, 0, 0);
+    color: rgb(247, 17, 17);
+}
 
 nav{
 
