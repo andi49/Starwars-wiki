@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   const lightsaber = document.getElementById('lightsaber')
+  if (!lightsaber) {
+    return
+  }
+
   const baseHeight = 0
-  const scrollStartSound = new Audio('audio/lightsaber.mp3')
+  const audioBasePath = window.location.pathname.toLowerCase().includes('/src/')
+    ? '../audio/'
+    : 'audio/'
+
+  const scrollStartSound = new Audio(`${audioBasePath}lightsaber.mp3`)
   scrollStartSound.preload = 'auto'
-  const entersound = new Audio('audio/lightsaber1.mp3')
+  const entersound = new Audio(`${audioBasePath}lightsaber1.mp3`)
   entersound.preload = 'auto'
 
   let isScrolling = false
@@ -14,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateLightsaberHeight () {
     const maxsabervh = window.innerHeight * 0.8
-    if (!lightsaber) {
-      return
-    }
+
     const scrollAmount = window.scrollY
     if (scrollAmount > maxsabervh) {
       return
@@ -42,6 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lightsaber.style.height = `${baseHeight + scrollVh}vh`
   }
+
+  // Let the blade extend slightly when the page first loads.
+  // lightsaber.style.height = '0vh'
+  // lightsaber.style.transition = 'height 450ms ease-out, box-shadow 200ms ease-out'
+  // requestAnimationFrame(() => {
+  //   lightsaber.style.height = `${baseHeight}vh`
+  // })
 
   window.addEventListener('scroll', updateLightsaberHeight)
 })
