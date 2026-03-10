@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let scrollStopTimer
 
   function updateLightsaberHeight () {
+    const maxsabervh = window.innerHeight * 0.8
     if (!lightsaber) {
       return
     }
@@ -24,13 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150)
 
     const scrollAmount = window.scrollY
+    if (scrollAmount > maxsabervh) {
+      return
+    }
     console.log(scrollAmount)
+    console.log(maxsabervh)
     if (scrollAmount > 5) {
       lightsaber.style.boxShadow = '-1px -6px 41px 14px #00FF28'
     } else {
       lightsaber.style.boxShadow = ''
     }
     const scrollVh = (scrollAmount / window.innerHeight) * 100
+    console.log(baseHeight, 'base')
     lightsaber.style.height = `${baseHeight + scrollVh}vh`
   }
 
