@@ -1,0 +1,20 @@
+#lightsaber{
+  position: fixed;
+  bottom: 13.5rem;
+  right: 3.75rem;
+  padding-right: 20px;
+  width: 20px;
+  height: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: chartreuse;
+  z-index: 10;
+}
+#saberhandle{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10rem;
+}
