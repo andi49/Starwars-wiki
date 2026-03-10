@@ -1,14 +1,13 @@
-:root{
+:root {
     --mailbox-colorone: #0b1c2d;
     --mailbox-colortwo: #050b15;
     --mailbox-colorThree: #2aa4ff;
     --mailbox-colorFour: #cfe9ff;
     --mailbox-colorFive: #9fd8ff;
-    --mailbox-fontone: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    --mailbox-fontone: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,12 +24,18 @@
 }
 
 .computer {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
     display: flex;
     justify-content: center;
+    background: linear-gradient(#0f2438, #050b15);
+    border: 8px solid #1a3a55;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.4), inset 0 0 30px rgba(0, 80, 150, 0.4);
 }
 
-
-.mailbox{
+.mailbox {
     width: 100%;
     padding: 20px;
     background: linear-gradient(180deg, var(--mailbox-colorone), var(--mailbox-colortwo));
@@ -38,10 +43,10 @@
     border: 0.5rem solid var(--mailbox-colorThree);
     box-shadow: 0 0 15px rgba(0, 170, 255, 0.6), inset 0 0 20px rgba(0, 120, 255, 0.3);
     color: #cfe9ff;
-    font-family: var(--mailbox-fontone)
+    font-family: var(--mailbox-fontone);
 }
 
-.mailbox-tittle{
+.mailbox-tittle {
     font-size: 2rem;
     letter-spacing: 2px;
     color: var(--mailbox-colorFive);
@@ -50,7 +55,7 @@
     text-align: center;
 }
 
-.input-field{
+.input-field {
     width: 100%;
     padding: 10px;
     margin-bottom: 12px;
@@ -61,52 +66,57 @@
     box-shadow: inset 0 0 10px rgba(0, 120, 255, 0.4);
 }
 
-.text-area{
+.text-area {
     height: 220px;
     resize: none;
 }
 
 .send-btn {
-  padding: 12px 28px;
-  border-radius: 10px;
-  border: 1px solid var(--mailbox-colorFive);
-  background: linear-gradient(#7f9eb5,#4e6c82);
-  color: #0c1a2c;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: inset 0 2px 4px rgba(255,255,255,0.4),  0 0 10px rgba(0,150,255,0.5);
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: 1px solid var(--mailbox-colorFive);
+    background: linear-gradient(#7f9eb5, #4e6c82);
+    color: #0c1a2c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), 0 0 10px rgba(0, 150, 255, 0.5);
 }
 
 .send-btn:hover {
-  background: linear-gradient(#9fc2db,#5f89a6);
+    background: linear-gradient(#9fc2db, #5f89a6);
 }
-
-
 
 @media (max-width: 800px) {
+    .page {
+        padding-top: 1.2rem;
+    }
 
-.mailbox{
-    padding: 10px;
-    border-width: 0.3rem;
-}
+    .computer {
+        max-width: 100%;
+        padding: 10px;
+        border-width: 0.3rem;
+    }
 
-.mailbox-tittle{
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
+    .mailbox {
+        padding: 10px;
+        border-width: 0.3rem;
+    }
 
-.input-field{
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-}
+    .mailbox-tittle {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
 
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
 
-
-.send-btn{
-    width: 100%;
-    padding: 14px;
-    font-size: 1rem;
-}
+    .send-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+    }
 }

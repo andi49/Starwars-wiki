@@ -48,8 +48,6 @@ header {
     gap:30px;
 }
 
-
-
 .menu-toggle{
     display: none;
     background: none;
@@ -81,7 +79,7 @@ header {
     left:0;
     width:100%;
     text-align:center;
-     gap:5px;
+    gap:5px;
    
 }
 
@@ -109,4 +107,59 @@ p{
 footer{
     justify-content: center;
     justify-self: center;
+}
+
+/* FOOTER */
+
+.imges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 150px;
+}
+
+.center{
+   padding: 25px 0 25px 0;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.listItems{
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    gap:20px; 
+    font-size: 25px;
+}
+
+.listItemsLinks{
+  padding-top: 20px;
+   display:flex;
+   flex-direction: column;
+    justify-content:center; 
+    align-items:center;
+    gap:20px; 
+    font-size:1rem;
+}
+
+.listItems, .listItemsLinks li{
+    list-style:none;
+}
+
+.fa-tiktok{
+    color: white;
+}
+
+.fa-instagram{
+    color: #833ab4;
+}
+
+.fa-facebook{
+    color: blue;
+}
+
+.fa-reddit{
+    color: orangered;
 }
