@@ -23,7 +23,7 @@ async function fetchStarWarsData() {
         const combineData = akababData.map(char => {
             // find matching Names from both apis 
             const matchNames = dataBankCharacters.find(dbChar => dbChar.name === char.name)
-          
+
             const newData = {
                 name: char.name,
                 image: char.image,
@@ -42,30 +42,32 @@ async function fetchStarWarsData() {
         const jedi = combineData.filter(char => char.affiliations?.includes("Jedi Order"));
         console.log("Hittade jedi:", jedi)
 
-       const  renderJedi = async ()=>{
-        console.log(jediCard)
+        const renderJedi = async () => {
+            console.log(jediCard)
             jedi.forEach(j => {
                 const jediDiv = document.createElement('div')
-                //const charImgEl = document.createElement('img')
+                const charImgEl = document.createElement('img')
                 const charNameEl = document.createElement('h1')
                 const charDesEl = document.createElement('p')
-               
+
                 const name = j.name
                 const description = j.description
-                const affiliations = j.affiliations
-                
-             
-              // charImgEl.src = j.image
+                const charImg = j.image
+               
+                   charImgEl.classList.add('charImg')
+                   jediDiv.classList.add('JediDiv')
+
+                charImgEl.src = charImg
                 charNameEl.innerText = `${name}`
                 charDesEl.innerText = `Description: ${description}`
-             
 
-                 jediDiv.append(charNameEl,charDesEl)
-                 jediCard.append(jediDiv)
-                
+
+                jediDiv.append(charImgEl,charNameEl, charDesEl)
+                jediCard.append(jediDiv)
+
             });
         }
-renderJedi()
+        renderJedi()
 
     } catch (err) {
         console.error('does not work')
