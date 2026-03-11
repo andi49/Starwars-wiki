@@ -203,44 +203,80 @@ footer,
 
 /* FOOTER */
 
-.footerWrapper{
-    justify-content: center;
-    justify-self: center;
+.footerWrapper,
+footer {
+  width: min(1100px, 92%);
+  margin: 2rem auto 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(7, 16, 29, 0.88), rgba(5, 12, 22, 0.82));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 18px rgba(122, 182, 255, 0.18);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  justify-self: center;
 }
 
-
-.footerMarks{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 150px;
+.socialLinkWrapper,
+.internalLinkWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.8rem, 3vw, 1.6rem);
+  padding: 0.4rem 0;
 }
 
-.socialLinkWrapper{
-    display:flex;
-    justify-content:center; 
-    align-items:center;
-    gap:20px; 
-    font-size: 25px;
+.socialLinkWrapper {
+  font-size: 1.15rem;
 }
 
-.internalLinkWrapper{
-  padding-top: 20px;
-    display:flex;
-    flex-direction: column;
-    justify-content:center; 
-    align-items:center;
-    gap:20px; 
-    font-size:1rem;
+.internalLinkWrapper {
+  flex-wrap: wrap;
+  font-size: 1rem;
 }
 
-
-.internalLinkWrapper  a, .socialLinkWrapper  a{
-    text-decoration: none;
+.socialLinkWrapper li,
+.internalLinkWrapper li {
+  list-style: none;
 }
-.internalLinkWrapper li , .socialLinkWrapper li {
-    list-style:none;
+
+.internalLinkWrapper a,
+.socialLinkWrapper a {
+  text-decoration: none;
+}
+
+.socialLinkWrapper li {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.socialLinkWrapper li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 210, 77, 0.5);
+  box-shadow: 0 0 14px rgba(255, 210, 77, 0.22);
+}
+
+.footerMeta {
+  margin-top: 0.35rem;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+  .footerWrapper,
+  footer {
+    padding: 0.9rem;
+  }
 }
 
 .fa-tiktok{
