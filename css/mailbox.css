@@ -35,6 +35,12 @@
     box-shadow: 0 0 25px rgba(0, 150, 255, 0.4), inset 0 0 30px rgba(0, 80, 150, 0.4);
 }
 
+.fee{
+    color: #f2c94c;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .mailbox {
     width: 100%;
     padding: 20px;

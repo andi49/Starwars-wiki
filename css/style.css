@@ -104,12 +104,15 @@ header {
 p{
     margin-bottom: 20px;
 }
+
+
+/* FOOTER */
+
 footer{
     justify-content: center;
     justify-self: center;
 }
 
-/* FOOTER */
 
 .imges{
     display: flex;
@@ -132,6 +135,7 @@ footer{
     align-items:center;
     gap:20px; 
     font-size: 25px;
+   
 }
 
 .listItemsLinks{
@@ -144,8 +148,10 @@ footer{
     font-size:1rem;
 }
 
+
 .listItems, .listItemsLinks li{
     list-style:none;
+    text-decoration: none;
 }
 
 .fa-tiktok{
