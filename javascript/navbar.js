@@ -1,8 +1,8 @@
-const menuToggle = document.querySelector('#menuToggle');
-const navLinks = document.querySelector('#navLinks');
-const imgStarfighter = document.querySelector('#imgStarfighter')
+const menuBtn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.site-nav');
+const imgStarfighter = document.querySelector('.imgStarfighter')
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  imgStarfighter.classList.toggle('active')
-})
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle("active");
+  imgStarfighter.classList.toggle('active');
+});
