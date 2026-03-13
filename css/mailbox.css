@@ -36,6 +36,7 @@
 }
 
 .fee{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #f2c94c;
     font-weight: bold;
     font-size: 20px;
@@ -49,19 +50,26 @@
     border: 0.5rem solid var(--mailbox-colorThree);
     box-shadow: 0 0 15px rgba(0, 170, 255, 0.6), inset 0 0 20px rgba(0, 120, 255, 0.3);
     color: #cfe9ff;
-    font-family: var(--mailbox-fontone);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.mailbox-tittle {
+.mailbox .mailbox-tittle {
     font-size: 2rem;
     letter-spacing: 2px;
     color: var(--mailbox-colorFive);
     text-shadow: 0 0 8px var(--mailbox-colorThree);
     margin-bottom: 10px;
     text-align: center;
+    font-weight: bold;
+}
+
+.mailbox .mailbox-tittle h1 {
+    font-family: 'Orbitron', sans-serif !important;
+    margin: 0;
 }
 
 .input-field {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
     padding: 10px;
     margin-bottom: 12px;
@@ -78,6 +86,7 @@
 }
 
 .send-btn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 12px 28px;
     border-radius: 10px;
     border: 1px solid var(--mailbox-colorFive);
@@ -91,6 +100,318 @@
 
 .send-btn:hover {
     background: linear-gradient(#9fc2db, #5f89a6);
+}
+
+/* Popup Styling */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+.popup-content {
+    background: linear-gradient(135deg, rgba(11, 28, 45, 0.95), rgba(5, 11, 21, 0.95));
+    border: 3px solid #2aa4ff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(42, 164, 255, 0.6), inset 0 0 20px rgba(0, 120, 255, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.popup-content.success {
+    border-color: #FFD700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6), inset 0 0 20px rgba(255, 150, 0, 0.2);
+}
+
+.popup-content.error {
+    border-color: #FF6B6B;
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.6), inset 0 0 20px rgba(255, 100, 100, 0.2);
+}
+
+.popup-content.loading {
+    border-color: #2aa4ff;
+}
+
+.popup-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup-message p {
+    color: #cfe9ff;
+    font-size: 18px;
+    font-family: 'Gill Sans', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.popup-content.success .popup-message p {
+    color: #FFD700;
+}
+
+.popup-content.error .popup-message p {
+    color: #FF6B6B;
+}
+
+/* Loading Spinner Animation */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(42, 164, 255, 0.3);
+    border-top: 4px solid #2aa4ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Icon Animation */
+.popup-content.error::before {
+    content: "!";
+    display: block;
+    font-size: 48px;
+    color: #FF6B6B;
+    margin-bottom: 10px;
+    animation: slideInScale 0.5s ease-out;
+}
+
+.popup-content.success::before {
+    content: "✓";
+    display: block;
+    font-size: 48px;
+    color: #FFD700;
+    margin-bottom: 10px;
+    animation: slideInScale 0.5s ease-out;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #FF6B6B;
+    background: rgba(255, 107, 107, 0.2);
+    color: #FF6B6B;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.popup-close:hover {
+    background: rgba(255, 107, 107, 0.4);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+    transform: scale(1.1);
+}
+
+.popup-close:active {
+    transform: scale(0.95);
+}
+
+@keyframes slideInScale {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Imperial Surveillance Feed Styling */
+.imperial-feed-container {
+    max-width: 600px;
+    margin: 60px auto 40px;
+    padding: 20px;
+    position: relative;
+}
+
+.live-indicator {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: #FF6B6B;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 10;
+    animation: pulse-live 1s infinite;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+}
+
+@keyframes pulse-live {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+    }
+    50% {
+        opacity: 0.6;
+        box-shadow: 0 0 25px rgba(255, 107, 107, 1);
+    }
+}
+
+.feed-label {
+    text-align: center;
+    color: #FFD700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.surveillance-feed {
+    position: relative;
+    border: 4px solid #2aa4ff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(42, 164, 255, 0.6), inset 0 0 20px rgba(0, 120, 255, 0.2);
+    background: #000;
+}
+
+.surveillance-feed img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Scanlines Overlay */
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    animation: scanlines-move 8s linear infinite;
+}
+
+@keyframes scanlines-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Optional: Add some glitch/flicker effect */
+.surveillance-feed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(42, 164, 255, 0.03) 50%,
+        transparent 100%
+    );
+    animation: flicker 0.15s infinite;
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.27861;
+    }
+    5% {
+        opacity: 0.34769;
+    }
+    10% {
+        opacity: 0.23099;
+    }
+    15% {
+        opacity: 0.98892;
+    }
+    20% {
+        opacity: 0.95033;
+    }
+    25% {
+        opacity: 0.40882;
+    }
+    30% {
+        opacity: 0.80098;
+    }
+    35% {
+        opacity: 0.87917;
+    }
+    40% {
+        opacity: 0.90834;
+    }
+    45% {
+        opacity: 0.96449;
+    }
+    50% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0.96449;
+    }
+    60% {
+        opacity: 0.89654;
+    }
+    65% {
+        opacity: 0.99631;
+    }
+    70% {
+        opacity: 0.97718;
+    }
+    75% {
+        opacity: 0.97438;
+    }
+    80% {
+        opacity: 0.95807;
+    }
+    85% {
+        opacity: 0.92888;
+    }
+    90% {
+        opacity: 0.94879;
+    }
+    95% {
+        opacity: 0.95027;
+    }
+    100% {
+        opacity: 0.91945;
+    }
 }
 
 @media (max-width: 800px) {
@@ -124,5 +445,99 @@
         width: 100%;
         padding: 14px;
         font-size: 1rem;
+    }
+
+    .imperial-feed-container {
+        max-width: 100%;
+        padding: 15px;
+        margin: 40px auto 30px;
+    }
+
+    .live-indicator {
+        top: 20px;
+        left: 20px;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    .feed-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .surveillance-feed {
+        border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .computer {
+        max-width: 100%;
+        padding: 8px;
+        border-width: 2px;
+    }
+
+    .mailbox {
+        padding: 15px;
+        border-width: 2px;
+    }
+
+    .mailbox-tittle h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        word-break: break-word;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+    .text-area {
+        height: 150px;
+    }
+
+    .send-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .fee {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .imperial-feed-container {
+        padding: 8px;
+        margin: 20px auto 15px;
+    }
+
+    .live-indicator {
+        top: 12px;
+        left: 12px;
+        padding: 5px 8px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .feed-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .surveillance-feed {
+        border-width: 2px;
     }
 }

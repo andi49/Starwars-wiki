@@ -171,7 +171,196 @@
     }
 }
 
-/* Mobile Responsive Design */
+/* About page content sections */
+
+.intro-message {
+    background: linear-gradient(135deg, rgba(15, 36, 56, 0.8), rgba(5, 11, 21, 0.8));
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.2);
+}
+
+.intro-message h2 {
+    color: #FFD700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.intro-message p {
+    color: #cce7ff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px
+}
+
+.about-project, .our-team, .our-goals, .contribute {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 8px;
+    background: rgba(15, 36, 56, 0.5);
+}
+
+.about-project h2, .our-team h2, .our-goals h2, .contribute h2 {
+    color: #FFD700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.about-project p {
+    color: #cce7ff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-member {
+    background: linear-gradient(135deg, rgba(0, 120, 255, 0.1), rgba(0, 80, 150, 0.1));
+    border: 2px solid rgba(42, 164, 255, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-member.expedition {
+    border-color: rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 150, 0, 0.05));
+}
+
+.team-member h3 {
+    color: #2aa4ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.team-member.expedition h3 {
+    color: #FFD700;
+}
+
+.team-member p {
+    color: #cce7ff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.member-list {
+    list-style: none;
+    padding: 15px 0;
+    margin: 15px 0;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.member-list li {
+    color: #cce7ff;
+    font-size: 15px;
+    padding: 8px 0;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+.member-list .role {
+    color: #FFD700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    padding: 2px 8px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 3px;
+}
+
+.team-member.expedition .member-list .role {
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.15);
+}
+
+.goals-list {
+    list-style: none;
+    padding: 0;
+    color: #cce7ff;
+}
+
+.goals-list li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.goals-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.contribute {
+    text-align: center;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.contribute p {
+    color: #cce7ff;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.cta-link {
+    display: inline-block;
+    color: #FFD700;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Mobile responsive for about sections */
+@media (max-width: 768px) {
+    .intro-message, .about-project, .our-team, .our-goals, .contribute {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-message h2, .about-project h2, .our-team h2, .our-goals h2, .contribute h2 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Responsive Design - Video and Controls */
 @media (max-width: 768px) {
     #intro.showIntro {
         width: 95%;
