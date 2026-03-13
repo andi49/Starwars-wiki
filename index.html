@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/lightsaber.css" />
+    <link rel="stylesheet" href="css/mailbox.css" />
 
     <title>STARWARS WIKI</title>
   </head>
@@ -34,10 +35,22 @@
         </nav>
       </header>
       <main>
+        <section class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title">THE GALACTIC ARCHIVES</h1>
+            <p class="hero-subtitle">Explore the infinite depths of the Star Wars universe</p>
+            <p class="hero-description">
+              From the ancient Jedi Order to the fearsome Sith Empire, discover comprehensive data on characters, 
+              starships, vehicles, and civilizations across galaxies. Your journey through the cosmos begins here.
+            </p>
+          </div>
+          <div class="hero-glow"></div>
+        </section>
+
         <div id="contentwrapper" class="contentwrapper">
             <div id="jedidiv" class="leftcontent" >
                 <a href="src/jedi.html"><h1>Jedi</h1>
-                <img src="img/Jedi.png" alt="">
+                <img src="img/jedi.webp" alt="Jedi Order">
                 <div><p>
 
                     An ancient order of Force-wielders devoted to the dark side, the Sith practice hate, 
@@ -52,7 +65,7 @@
             <div id="sithdiv" class="rightcontent">
                 <a href="src/Sith.html">
                     <h1>Sith</h1>
-                    <img src="img/Sith.png" alt="">
+                    <img src="img/sith.webp" alt="Sith Empire">
                     <div>
                         <p>
                             A noble order of protectors unified by their ability to tap into the power of the Force, 
@@ -63,6 +76,16 @@
                 </a>
             </div>
         </div>
+
+        <div class="imperial-feed-container">
+          <div class="live-indicator">LIVE</div>
+          <div class="feed-label">IMPERIAL SURVEILLANCE FEED</div>
+          <div class="surveillance-feed">
+            <img src="img/jacuzzi.gif" alt="Imperial Surveillance">
+            <div class="scanlines"></div>
+          </div>
+        </div>
+
       <footer class="footerWrapper">
         <ul class="internalLinkWrapper">
           <li>  <a href="src/about.html" class="about">About us</a></li>
