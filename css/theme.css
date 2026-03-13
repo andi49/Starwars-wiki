@@ -135,12 +135,13 @@ footer,
   position: absolute;
   right: 0;  
   transform: rotate(-90deg);
+  transition: transform 0.6s ease-in-out;
 }
 
 .imgStarfighter.active{
+  animation: starfighterFly 1s ease forwards;
      transform: rotate(180deg);
 }
-
 
 }
 
