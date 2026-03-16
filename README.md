@@ -138,18 +138,6 @@ Notering: Footer visar sociala ikoner visuellt, men de är för närvarande inte
 
 ---
 
-# 🛠 Tekniker
-
-Projektet är byggt med:
-
-- HTML
-- CSS
-- JavaScript
-- Fetch API
-- Git & GitHub
-
----
-
 # 🤝 Samarbete och GitHub
 
 Vi har använt **GitHub** för versionshantering och samarbete i gruppen.
@@ -215,15 +203,4 @@ https://github.com/andi49/Starwars-wiki
 (lägg till länk här om sidan hostas)
 
 ---
-
-# ⭐ Framtida förbättringar
-
-Möjliga förbättringar för projektet:
-
-- fler API-funktioner
-- förbättrad sökfunktion
-- fler karaktärsdetaljer
-- fler animationer och visuella effekter
-
-
 
