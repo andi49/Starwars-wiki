@@ -1,12 +1,12 @@
 # 🌌 Starwars Wiki
 
-En responsiv webbplats som visar information om Star Wars-karaktärer genom att hämta data från ett externt API. Projektet är gjort som en gruppuppgift med fokus på samarbete, versionshantering och modern webbutveckling.
+En responsiv webbplats som visar information om Star Wars-karaktärer, fordon och arter genom att hämta data från ett externt API. Projektet är gjort som en gruppuppgift med fokus på samarbete, versionshantering och webbutveckling.
 
 ---
 
 # 📖 Om projektet
 
-Starwars Wiki är en webbsida där användare kan utforska olika karaktärer från Star Wars-universumet. Informationen hämtas dynamiskt från ett API och presenteras på ett enkelt och användarvänligt sätt.
+Starwars Wiki är en webbsida där användare kan utforska olika Jedi & Sith-karaktärer, fordon, skepp och arter från Star Wars-universumet. Informationen hämtas dynamiskt från ett API och presenteras på ett enkelt och användarvänligt sätt.
 
 Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-first** tänk för att fungera bra på både mobil och desktop.
 
@@ -19,14 +19,11 @@ Projektet är byggt med **HTML, CSS och JavaScript** och följer ett **mobile-fi
 
 ### Gruppmedlemmar
 
-- Andreas Pavel 🚩 (Projektledare)
-- Charlie
-- Isak
-- David
-- Syed Muhammad
-- Deaa
-- Salma
-
+- [andi49](https://github.com/andi49) 🚩 (Projektledare/Fronted)
+- [Charlie](https://github.com/Kingtutz) (Frontend)
+- [Isak](https://github.com/Isakgit24) (API/Frontend)
+- [David](https://github.com/Davve420) (UX/Desig)
+- [Salma](https://github.com/salmaharastani) (Frontend)
 ---
 
 # 🔗 API
@@ -45,8 +42,13 @@ API:t används för att hämta information om olika karaktärer i Star Wars-univ
 
 Webbplatsen innehåller bland annat:
 
-- Visa Star Wars-karaktärer från API
-- Sök efter karaktärer
+- Visa Star Wars-data från API:
+- Karaktärer
+  - Jedi
+  - Sith
+- Fordon
+- Rymdskepp
+- Species
 - Navigera mellan olika sidor
 - Responsiv design för mobil och desktop
 - Modern layout inspirerad av Star Wars
@@ -61,7 +63,8 @@ Webbplatsen innehåller minst fyra sidor:
 - **Characters** – lista över karaktärer från API  
 - **About Us** – information om projektet  
 - **Contact** – kontaktinformation  
-
+- **Ships and Vechiles** – skepp och fordon
+- **Species** – art
 ---
 
 # 🎨 Design
@@ -136,18 +139,8 @@ Notering: Footer visar sociala ikoner visuellt, men de är för närvarande inte
 - **forum.html**: `theme.css` + `style.css` + `mailbox.css`
 - **jedi.html / Sith.html**: `theme.css` + `page-shell.css` + `jedi.css`
 - **character-of-the-day.html**: `theme.css` + `character-of-the-day.css`
-
----
-
-# 🛠 Tekniker
-
-Projektet är byggt med:
-
-- HTML
-- CSS
-- JavaScript
-- Fetch API
-- Git & GitHub
+- **ships.html**: `style.css` + `theme.css` + `lightsaber.css` + `page-shell.css`
+- **species.html**: `style.css` + `theme.css` + `lightsaber.css` + `page-shell.css`
 
 ---
 
@@ -213,18 +206,7 @@ https://github.com/andi49/Starwars-wiki
 
 **GitHub Pages**
 
-(lägg till länk här om sidan hostas)
+https://andi49.github.io/Starwars-wiki
 
 ---
-
-# ⭐ Framtida förbättringar
-
-Möjliga förbättringar för projektet:
-
-- fler API-funktioner
-- förbättrad sökfunktion
-- fler karaktärsdetaljer
-- fler animationer och visuella effekter
-
-
 
