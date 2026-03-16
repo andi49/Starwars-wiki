@@ -46,7 +46,6 @@ API:t används för att hämta information om olika karaktärer i Star Wars-univ
 Webbplatsen innehåller bland annat:
 
 - Visa Star Wars-karaktärer från API
-- Sök efter karaktärer
 - Navigera mellan olika sidor
 - Responsiv design för mobil och desktop
 - Modern layout inspirerad av Star Wars
