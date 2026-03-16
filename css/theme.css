@@ -369,4 +369,140 @@ footer {
 ::view-transition-group(*):not(site-header){
   animation: normal;
   animation-duration: 1s;
+}/* =========================
+   LIGHT MODE
+========================= */
+
+body.lightmode {
+  color: #111827;
+  background:
+    radial-gradient(1200px 700px at 10% 10%, rgba(46, 103, 248, 0.18), transparent),
+    radial-gradient(900px 500px at 90% 90%, rgba(255, 208, 77, 0.16), transparent),
+    #f4f6fb;
+  background-attachment: fixed;
+}
+
+body.lightmode .noise {
+  opacity: 0.04;
+}
+
+body.lightmode .star {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px rgba(46, 103, 248, 0.18);
+}
+
+/* Navbar */
+body.lightmode .site-nav a,
+body.lightmode .nav-links a {
+  color: #111827;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+}
+
+body.lightmode .site-nav a:hover,
+body.lightmode .nav-links a:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobilmeny */
+@media (max-width: 800px) {
+  body.lightmode .site-nav.active {
+    background:
+      radial-gradient(1200px 700px at 10% 10%, rgba(46, 103, 248, 0.12), transparent),
+      radial-gradient(900px 500px at 90% 90%, rgba(255, 208, 77, 0.12), transparent),
+      #f4f6fb;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.12);
+  }
+}
+
+/* Footer */
+body.lightmode .footerWrapper,
+body.lightmode footer {
+  border: 1px solid rgba(46, 103, 248, 0.18);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 247, 252, 0.92));
+  box-shadow:
+    0 10px 28px rgba(17, 24, 39, 0.08),
+    0 0 18px rgba(46, 103, 248, 0.08);
+}
+
+body.lightmode .footerMeta {
+  color: #4b5563;
+}
+
+body.lightmode .socialLinkWrapper li {
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+body.lightmode .socialLinkWrapper li:hover {
+  border-color: rgba(46, 103, 248, 0.4);
+  box-shadow: 0 0 14px rgba(46, 103, 248, 0.16);
+}
+
+/* Länkar i light mode behåller sina temafärger */
+body.lightmode .about { color: var(--nav-about); }
+body.lightmode .forum { color: var(--nav-forum); }
+body.lightmode .wiki { color: #b68a00; }
+body.lightmode .jedi { color: #159947; }
+body.lightmode .sith { color: #d14949; }
+body.lightmode .character { color: #d98200; }
+
+/* Active states i light mode */
+body.lightmode .site-nav .about.active {
+  border-color: rgba(131, 169, 255, 0.65);
+  box-shadow: 0 0 14px rgba(131, 169, 255, 0.2);
+}
+
+body.lightmode .site-nav .forum.active {
+  border-color: rgba(219, 135, 255, 0.65);
+  box-shadow: 0 0 14px rgba(219, 135, 255, 0.2);
+}
+
+body.lightmode .site-nav .wiki.active {
+  border-color: rgba(255, 210, 77, 0.8);
+  box-shadow: 0 0 14px rgba(255, 210, 77, 0.24);
+}
+
+body.lightmode .site-nav .jedi.active {
+  border-color: rgba(146, 255, 140, 0.8);
+  box-shadow: 0 0 14px rgba(146, 255, 140, 0.22);
+}
+
+body.lightmode .site-nav .sith.active {
+  border-color: rgba(255, 143, 143, 0.8);
+  box-shadow: 0 0 14px rgba(255, 143, 143, 0.22);
+}
+
+body.lightmode .site-nav .character.active {
+  border-color: rgba(255, 190, 92, 0.8);
+  box-shadow: 0 0 14px rgba(255, 190, 92, 0.22);
+}
+.theme-toggle-btn {
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(6, 15, 30, 0.68);
+  padding: 0.48rem 0.78rem;
+  border-radius: 999px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 210, 77, 0.75);
+  box-shadow: 0 0 18px rgba(255, 210, 77, 0.35);
+}
+
+body.lightmode .theme-toggle-btn {
+  color: #111827;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
 }
