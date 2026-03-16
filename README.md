@@ -201,7 +201,7 @@ https://github.com/andi49/Starwars-wiki
 
 **GitHub Pages**
 
-(lägg till länk här om sidan hostas)
+https://andi49.github.io/Starwars-wiki
 
 ---
 
