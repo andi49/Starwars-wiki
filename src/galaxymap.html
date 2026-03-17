@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/lightsaber.css" />
     <link rel="stylesheet" href="../css/mailbox.css" />
+    <link rel="stylesheet" href="../css/galaxymap.css" />
     <script src="../javascript/theme-toggle.js" defer></script>
+    <script src="../javascript/zoom.js" defer></script>
 
     <title>Galaxy Map - Star Wars Wiki</title>
   </head>
@@ -44,7 +46,13 @@
       </header>
 
       <main>
-        <!-- Content kommer här senare -->
+        <div class="map-controls">
+          <button onclick="resetZoom()">Reset</button>
+        </div>
+
+        <div class="image-container" id="map-container">
+          <img id="map-image" src="../img/star_wars_galaxy_map_4000x4000_20251009_3c4d0e08.jpeg" alt="Galaxy Map" class="galaxymap">
+        </div>
       </main>
 
       <footer class="footerWrapper">
