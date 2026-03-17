@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 :root {
@@ -160,44 +162,30 @@ footer,
 .site-nav a,
 .nav-links a {
   text-decoration: none;
-  color: var(--ink);
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(6, 15, 30, 0.68);
   padding: 0.48rem 0.78rem;
   border-radius: 999px;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  font-family: "Italiana", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.about { color: var(--nav-about);
-  font-family: "Italiana", sans-serif;
-  font-weight: 700;
-  font-style: normal; 
-}
-.forum { color: var(--nav-forum);  
-  font-family: "Italiana", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.wiki { color: var(--nav-wiki);
-  font-family: "Italiana", sans-serif;
-  font-weight: 700;
-  font-style: normal; 
-}
-.jedi { color: var(--nav-jedi);
-  font-family: "Italiana", sans-serif;
-  font-weight: 700;
-  font-style: normal; 
-}
-.sith { color: var(--nav-sith);
-  font-family: "Italiana", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.character { color: var(--nav-character);
-  font-family: "Italiana", sans-serif;
-  font-weight: 700;
-  font-style: normal;  
-}
+.site-nav .about { }
+.site-nav .forum { }
+.site-nav .wiki { }
+.site-nav .jedi { }
+.site-nav .sith { }
+.site-nav .character { }
+
+.nav-links .about { }
+.nav-links .forum { }
+.nav-links .wiki { }
+.nav-links .jedi { }
+.nav-links .sith { }
+.nav-links .character { }
 
 .site-nav a:hover,
 .nav-links a:hover {
@@ -446,13 +434,20 @@ body.jedi .socialLinkWrapper li:hover {
   box-shadow: 0 0 14px rgba(36, 206, 36, 0.3);
 }
 
-/* Längkar i Jedi mode behåller sina temafärger */
-body.jedi .about { color: var(--nav-about); }
-body.jedi .forum { color: var(--nav-forum); }
-body.jedi .wiki { color: var(--nav-wiki); }
-body.jedi .jedi { color: #24CE24; }
-body.jedi .sith { color: var(--nav-sith); }
-body.jedi .character { color: var(--nav-character); }
+/* Längkar i Jedi mode behåller vita */
+body.jedi .site-nav .about { color: #ffffff; }
+body.jedi .site-nav .forum { color: #ffffff; }
+body.jedi .site-nav .wiki { color: #ffffff; }
+body.jedi .site-nav .jedi { color: #ffffff; }
+body.jedi .site-nav .sith { color: #ffffff; }
+body.jedi .site-nav .character { color: #ffffff; }
+
+body.jedi .nav-links .about { color: #ffffff; }
+body.jedi .nav-links .forum { color: #ffffff; }
+body.jedi .nav-links .wiki { color: #ffffff; }
+body.jedi .nav-links .jedi { color: #ffffff; }
+body.jedi .nav-links .sith { color: #ffffff; }
+body.jedi .nav-links .character { color: #ffffff; }
 
 /* Active tab is always yellow in both Sith and Jedi */
 .site-nav a.active,
