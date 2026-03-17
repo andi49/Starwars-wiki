@@ -221,8 +221,8 @@
 }
 
 .popup-close:hover {
-    background: rgba(255, 107, 107, 0.4);
-    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+    /* background: rgba(255, 107, 107, 0.4); */
+    /* box-shadow: 0 0 15px rgba(255, 107, 107, 0.6); */
     transform: scale(1.1);
 }
 

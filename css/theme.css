@@ -88,6 +88,7 @@ summary,
   animation: glowing 2s infinite alternate ease-in-out;
 }
 .site-header {
+  margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -190,20 +191,7 @@ footer,
   font-style: normal;
 }
 
-.site-nav .about { }
-.site-nav .forum { }
-.site-nav .wiki { }
-.site-nav .jedi { }
-.site-nav .sith { }
-.site-nav .character { }
-
-.nav-links .about { }
-.nav-links .forum { }
-.nav-links .wiki { }
-.nav-links .jedi { }
-.nav-links .sith { }
-.nav-links .character { }
-
+ 
 .site-nav a:hover,
 .nav-links a:hover {
   transform: translateY(-2px);
