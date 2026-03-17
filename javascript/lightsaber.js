@@ -5,11 +5,11 @@
  */
 
 // Load lightsaber handle image based on theme
-function loadSaberHandle() {
+function loadSaberHandle () {
   const handleDiv =
     document.getElementById('saberdiv') ||
     document.querySelector('.saber-anchor')
-  
+
   if (!handleDiv || handleDiv.querySelector('#saberhandle')) {
     return
   }
@@ -17,22 +17,22 @@ function loadSaberHandle() {
   const imageBasePath = window.location.pathname.toLowerCase().includes('/src/')
     ? '../img/'
     : 'img/'
-  
+
   const addHandle = document.createElement('img')
   addHandle.id = 'saberhandle'
   addHandle.alt = 'Lightsaber handle'
-  
+
   // Change handle based on theme
   const isJedi = document.body.classList.contains('jedi')
-  addHandle.src = isJedi 
-    ? `${imageBasePath}saberhanld.png` 
+  addHandle.src = isJedi
+    ? `${imageBasePath}saberhanld.png`
     : `${imageBasePath}sithlightsaber.png`
-  
+
   handleDiv.prepend(addHandle)
 }
 
 // Get CSS variable values
-function getCSSVariable(varName) {
+function getCSSVariable (varName) {
   const bodyValue = getComputedStyle(document.body)
     .getPropertyValue(varName)
     .trim()
@@ -47,19 +47,12 @@ function getCSSVariable(varName) {
 }
 
 // Update lightsaber colors based on theme and scroll position
-function updateSaberColors() {
+function updateSaberColors () {
   const lightsaber = document.getElementById('lightsaber')
   if (!lightsaber) return
 
   const scrollAmount = window.scrollY
   const maxSaberVh = window.innerHeight * 0.8
-
-  // Reset if scrolled too far
-  if (scrollAmount > maxSaberVh) {
-    lightsaber.style.boxShadow = ''
-    lightsaber.style.background = ''
-    return
-  }
 
   // Only show colors when scrolling
   if (scrollAmount > 5) {
@@ -72,8 +65,7 @@ function updateSaberColors() {
     lightsaber.style.boxShadow = `-1px -6px 41px 14px ${glowColor}`
 
     // Apply gradient background
-    lightsaber.style.background = 
-      `linear-gradient(to right, ${gradientStart} 0%, ${gradientMid} 50%, ${gradientEnd} 100%)`
+    lightsaber.style.background = `linear-gradient(to right, ${gradientStart} 0%, ${gradientMid} 50%, ${gradientEnd} 100%)`
   } else {
     lightsaber.style.boxShadow = ''
     lightsaber.style.background = ''
@@ -103,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const scrollStartSound = new Audio(`${audioBasePath}lightsaber.mp3`)
   scrollStartSound.preload = 'auto'
-  
+
   const enterSound = new Audio(`${audioBasePath}lightsaber1.mp3`)
   enterSound.preload = 'auto'
 
@@ -116,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // Update lightsaber height on scroll
-  function updateLightsaberHeight() {
+  function updateLightsaberHeight () {
     const maxSaberVh = window.innerHeight * 0.8
     const scrollAmount = window.scrollY
 
@@ -152,26 +144,29 @@ document.addEventListener('DOMContentLoaded', () => {
 // Update theme colors when theme changes (listen for theme-toggle)
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('themeToggle')
-  
+
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       // Update handle image after theme change
-      const handleDiv = document.getElementById('saberdiv') || 
-                       document.querySelector('.saber-anchor')
+      const handleDiv =
+        document.getElementById('saberdiv') ||
+        document.querySelector('.saber-anchor')
       const handle = handleDiv?.querySelector('#saberhandle')
-      
+
       if (handle) {
         const isJedi = document.body.classList.contains('jedi')
-        const imageBasePath = window.location.pathname.toLowerCase().includes('/src/')
+        const imageBasePath = window.location.pathname
+          .toLowerCase()
+          .includes('/src/')
           ? '../img/'
           : 'img/'
-        
+
         // Handle changes theme when clicked, so we check inverted state
-        handle.src = isJedi 
+        handle.src = isJedi
           ? `${imageBasePath}sithlightsaber.png`
           : `${imageBasePath}saberhanld.png`
       }
-      
+
       // Update colors
       setTimeout(() => updateSaberColors(), 10)
     })
