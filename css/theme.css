@@ -27,6 +27,8 @@
   --theme-accent: #BC1E22;
   --theme-surface-border: rgba(188, 30, 34, 0.5);
   --theme-surface-glow: rgba(188, 30, 34, 0.32);
+  --theme-cursor-default: url('../img/pintersith.png') 6 6, auto;
+  --theme-cursor-click: url('../img/pintersith.png') 6 6, pointer;
 }
 
 * {
@@ -37,6 +39,7 @@
 
 html {
   background-color: #04070d;
+  
 }
 
 body {
@@ -45,6 +48,7 @@ body {
   min-height: 100vh;
   color: var(--ink);
   font-family: 'Exo 2', sans-serif;
+  cursor: var(--theme-cursor-default);
   overflow-x: hidden;
   position: relative;
   background:
@@ -52,6 +56,19 @@ body {
     radial-gradient(900px 500px at 90% 90%, rgba(188, 30, 34, 0.22), transparent),
     #04070d;
   background-attachment: fixed;
+}
+
+a,
+button,
+[role='button'],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+label[for],
+summary,
+.menu-toggle,
+.theme-toggle-btn {
+  cursor: var(--theme-cursor-click) !important;
 }
 
 #stars {
@@ -372,6 +389,8 @@ body.jedi {
   --theme-accent: #24CE24;
   --theme-surface-border: rgba(36, 206, 36, 0.5);
   --theme-surface-glow: rgba(36, 206, 36, 0.32);
+  --theme-cursor-default: url('../img/pointerjedi.png') 6 6, auto;
+  --theme-cursor-click: url('../img/pointerjedi.png') 6 6, pointer;
 }
 
 body.jedi .noise {
