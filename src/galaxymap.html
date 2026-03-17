@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Avslöja Sith-imperiet. Läs om de mörka Force-användarna, deras herrar och deras strävan efter makt i galaxen." />
+    <meta name="description" content="Utforska galaxkartan i Star Wars-universumet." />
     <meta name="robots" content="index, follow" />
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/page-shell.css" />
-    <link rel="stylesheet" href="../css/lightsaber.css" />
-     <link rel="stylesheet" href="../css/jedi.css"/>
-    <script src="https://kit.fontawesome.com/493314404e.js" crossorigin="anonymous"></script>
     <script src="../javascript/lightsaber.js" defer></script>
     <script src="../javascript/starbackground.js" defer></script>
-   <script src="../javascript/theme-toggle.js" defer></script>
-  <title>StarWars Wiki | Sith</title>
+    <script src="https://kit.fontawesome.com/493314404e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/lightsaber.css" />
+    <link rel="stylesheet" href="../css/mailbox.css" />
+    <script src="../javascript/theme-toggle.js" defer></script>
+
+    <title>Galaxy Map - Star Wars Wiki</title>
   </head>
   <body class="sith">
     <div id="stars"></div>
@@ -22,32 +23,30 @@
     <div id="saberdiv" class="saber-anchor">
       <div id="lightsaber"></div>
     </div>
-     
+   
     <main class="page">
       <header class="site-header">
-         <button class="menu-toggle">
-            <img src="../img/starfighter.png" alt="meny" class="imgStarfighter">
-          </button>
+        <button class="menu-toggle">
+          <img src="../img/starfighter.png" alt="meny" class="imgStarfighter">
+        </button>
         <nav class="site-nav" aria-label="Main navigation">
           <a href="about.html" class="about">About us</a>
           <a href="forum.html" class="forum">Forum</a>
           <a href="jedi.html" class="jedi">Jedi</a>
-          <a href="Sith.html" class="sith active">Sith</a>
+          <a href="Sith.html" class="sith">Sith</a>
           <a href="../index.html" class="wiki">StarWars Wiki</a>
           <a href="character-of-the-day.html" class="character">Character</a>
           <a href="ships.html" class="jedi">Ships and vehicles</a>
-            <a href="species.html" class="jedi">Species</a>
-            <a href="galaxymap.html" class="jedi">Galaxy map</a>
+          <a href="species.html" class="jedi">Species</a>
+       <a href="galaxymap.html" class="jedi">Galaxy map</a>
         </nav>
         <button id="themeToggle" class="theme-toggle-btn" type="button">Tema</button>
       </header>
 
-      <section class="shell-card">
-        <h1 id="shellH1">Sith Archives</h1>
-        <div id="sith">
-      </div>
-      </section>
-    </main>
+      <main>
+        <!-- Content kommer här senare -->
+      </main>
+
       <footer class="footerWrapper">
         <ul class="internalLinkWrapper">
           <li>  <a href="about.html" class="about">About us</a></li>
@@ -62,7 +61,7 @@
         </ul>
         <p class="footerMeta">Galactic Archive // 2026</p>
       </footer>
+    </main>
   </body>
-  <script type="module" src="../javascript/sith.js"></script>
-    <script type="module" src="../javascript/navbar.js"></script>
+  <script type="module" src="../javascript/navbar.js"></script>
 </html>
